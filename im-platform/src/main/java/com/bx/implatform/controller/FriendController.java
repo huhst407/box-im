@@ -2,9 +2,12 @@ package com.bx.implatform.controller;
 
 import com.bx.implatform.annotation.RepeatSubmit;
 import com.bx.implatform.entity.Friend;
+import com.bx.implatform.exception.GlobalException;
 import com.bx.implatform.result.Result;
 import com.bx.implatform.result.ResultUtils;
 import com.bx.implatform.service.FriendService;
+import com.bx.implatform.service.PrivateMessageService;
+import com.bx.implatform.service.impl.PrivateMessageServiceImpl;
 import com.bx.implatform.session.SessionContext;
 import com.bx.implatform.vo.FriendVO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -15,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Tag(name = "好友")
@@ -24,10 +28,20 @@ import java.util.stream.Collectors;
 public class FriendController {
 
     private final FriendService friendService;
-
+    private final PrivateMessageService privateMessageService;
     @GetMapping("/list")
     @Operation(summary = "好友列表", description = "获取好友列表")
     public Result<List<FriendVO>> findFriends() {
+        long userId = SessionContext.getSession().getUserId();
+        long friendId=1l;
+        if (!Objects.equals(friendId, userId)) {
+            friendService.addFriend(1L);
+        }
+
+
+
+
+
         List<Friend> friends = friendService.findFriendByUserId(SessionContext.getSession().getUserId());
         List<FriendVO> vos = friends.stream().map(f -> {
             FriendVO vo = new FriendVO();
@@ -36,6 +50,7 @@ public class FriendController {
             vo.setNickName(f.getFriendNickName());
             return vo;
         }).collect(Collectors.toList());
+
         return ResultUtils.success(vos);
     }
 

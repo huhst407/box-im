@@ -15,7 +15,7 @@ public interface PrivateMessageService extends IService<PrivateMessage> {
      * @param dto 私聊消息
      * @return 消息id
      */
-    PrivateMessageVO sendMessage(PrivateMessageDTO dto);
+    PrivateMessageVO sendMessage(PrivateMessageDTO dto, Long userId, Integer terminal);
 
 
     /**
@@ -56,4 +56,9 @@ public interface PrivateMessageService extends IService<PrivateMessage> {
      * @param friendId 好友id
      */
     Long getMaxReadedId(Long friendId);
+
+
+
+
+
 }

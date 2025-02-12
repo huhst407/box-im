@@ -49,6 +49,7 @@ public class FriendServiceImpl extends ServiceImpl<FriendMapper, Friend> impleme
         if (friendId.equals(userId)) {
             throw new GlobalException("不允许添加自己为好友");
         }
+
         // 互相绑定好友关系
         FriendServiceImpl proxy = (FriendServiceImpl) AopContext.currentProxy();
         proxy.bindFriend(userId, friendId);

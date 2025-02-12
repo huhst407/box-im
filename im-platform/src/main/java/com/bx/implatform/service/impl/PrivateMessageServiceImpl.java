@@ -1,6 +1,5 @@
 package com.bx.implatform.service.impl;
 
-import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
@@ -28,9 +27,15 @@ import com.bx.implatform.vo.PrivateMessageVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DateUtils;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.net.URL;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URLEncoder;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -45,15 +50,16 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
     private final SensitiveFilterUtil sensitiveFilterUtil;
 
     @Override
-    public PrivateMessageVO sendMessage(PrivateMessageDTO dto) {
-        UserSession session = SessionContext.getSession();
-        Boolean isFriends = friendService.isFriend(session.getUserId(), dto.getRecvId());
+    public PrivateMessageVO sendMessage(PrivateMessageDTO dto, Long userId, Integer terminal) {
+        // 检查是否为好友
+        Boolean isFriends = friendService.isFriend(userId, dto.getRecvId());
         if (Boolean.FALSE.equals(isFriends)) {
             throw new GlobalException("您已不是对方好友，无法发送消息");
         }
+
         // 保存消息
         PrivateMessage msg = BeanUtils.copyProperties(dto, PrivateMessage.class);
-        msg.setSendId(session.getUserId());
+        msg.setSendId(userId);
         msg.setStatus(MessageStatus.UNSEND.code());
         msg.setSendTime(new Date());
         // 过滤内容中的敏感词
@@ -61,16 +67,24 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
             msg.setContent(sensitiveFilterUtil.filter(dto.getContent()));
         }
         this.save(msg);
+
+        // 发送消息后立即将状态设置为未读（UNREAD）
+        LambdaUpdateWrapper<PrivateMessage> updateWrapper = Wrappers.lambdaUpdate();
+        updateWrapper.eq(PrivateMessage::getId, msg.getId())
+                .set(PrivateMessage::getStatus, MessageStatus.UNREAD.code());  // 设置为未读
+        this.update(updateWrapper);  // 更新消息状态为未读
+
         // 推送消息
         PrivateMessageVO msgInfo = BeanUtils.copyProperties(msg, PrivateMessageVO.class);
         IMPrivateMessage<PrivateMessageVO> sendMessage = new IMPrivateMessage<>();
-        sendMessage.setSender(new IMUserInfo(session.getUserId(), session.getTerminal()));
+        sendMessage.setSender(new IMUserInfo(userId, terminal));
         sendMessage.setRecvId(msgInfo.getRecvId());
         sendMessage.setSendToSelf(true);
         sendMessage.setData(msgInfo);
         sendMessage.setSendResult(true);
         imClient.sendPrivateMessage(sendMessage);
-        log.info("发送私聊消息，发送id:{},接收id:{}，内容:{}", session.getUserId(), dto.getRecvId(), dto.getContent());
+        log.info("发送私聊消息，发送id:{},接收id:{}，内容:{}", userId, dto.getRecvId(), dto.getContent());
+
         return msgInfo;
     }
 
@@ -227,6 +241,52 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         return message.getId();
     }
 
+
+
+    public void autoReply(long userId) {
+        List<PrivateMessage> unreadMessages = findUnreadMessages(userId);
+        if (unreadMessages.isEmpty()) {
+            return;
+        }
+
+        for (PrivateMessage message : unreadMessages) {
+            String userMessage = message.getContent();
+            String botResponse = getResponseFromQingyunke(userMessage);
+
+            PrivateMessageDTO dto = new PrivateMessageDTO();
+            dto.setRecvId(message.getSendId());
+            dto.setContent(botResponse);
+            dto.setType(0);
+
+            // 调用sendMessage方法时，传递机器人客服的用户ID和终端类型
+            sendMessage(dto, userId, IMTerminalType.WEB.code());
+            readedMessage(message.getSendId());
+            message.setStatus(MessageStatus.READED.code());
+            this.updateById(message);
+        }
+    }
+
+    // 定时任务调用时，可以传递 userId 参数
+    @Scheduled(fixedRate = 1000)
+    public void scheduleAutoReply() {
+        long userId = 1L; // 机器人用户 ID
+        Integer terminal = IMTerminalType.WEB.code(); // 假设机器人客服使用WEB终端
+        UserSession session = createVirtualSession(userId, terminal);
+        SessionContext.setSession(session); // 设置虚拟会话
+        try {
+            autoReply(userId);
+        } finally {
+            SessionContext.removeSession(); // 清除虚拟会话
+        }
+    }
+
+    private UserSession createVirtualSession(Long userId, Integer terminal) {
+        UserSession session = new UserSession();
+        session.setUserId(userId);
+        session.setTerminal(terminal);
+        return session;
+    }
+
     private void sendLoadingMessage(Boolean isLoadding) {
         UserSession session = SessionContext.getSession();
         PrivateMessageVO msgInfo = new PrivateMessageVO();
@@ -241,4 +301,57 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         sendMessage.setSendResult(false);
         imClient.sendPrivateMessage(sendMessage);
     }
+
+
+
+
+
+    private List<PrivateMessage> findUnreadMessages(Long userId) {
+        // 查询未读消息
+        QueryWrapper<PrivateMessage> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda()
+                .eq(PrivateMessage::getRecvId, userId)
+                .eq(PrivateMessage::getStatus, MessageStatus.UNREAD.code());
+        return this.list(queryWrapper);
+    }
+
+    private String getResponseFromQingyunke(String userMessage) {
+        try {
+            String encodedMessage = URLEncoder.encode(userMessage, "UTF-8");
+            String urlString = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=" + encodedMessage;
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+                // 解析 JSON 响应
+                String jsonResponse = response.toString();
+                int startIndex = jsonResponse.indexOf("\"content\":\"") + 11;
+                int endIndex = jsonResponse.indexOf("\"}", startIndex);
+                if (startIndex != -1 && endIndex != -1) {
+                    return jsonResponse.substring(startIndex, endIndex);
+                } else {
+                    return "无法解析响应内容";
+                }
+            } else {
+                return "请求失败，响应码：" + responseCode;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "请求异常：" + e.getMessage();
+        }
+    }
+
+
+
 }

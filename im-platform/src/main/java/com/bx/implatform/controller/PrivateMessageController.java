@@ -4,6 +4,8 @@ import com.bx.implatform.dto.PrivateMessageDTO;
 import com.bx.implatform.result.Result;
 import com.bx.implatform.result.ResultUtils;
 import com.bx.implatform.service.PrivateMessageService;
+import com.bx.implatform.session.SessionContext;
+import com.bx.implatform.session.UserSession;
 import com.bx.implatform.vo.PrivateMessageVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,8 +26,20 @@ public class PrivateMessageController {
 
     @PostMapping("/send")
     @Operation(summary = "发送消息", description = "发送私聊消息")
-    public Result<PrivateMessageVO> sendMessage(@Valid @RequestBody PrivateMessageDTO vo) {
-        return ResultUtils.success(privateMessageService.sendMessage(vo));
+    public Result<PrivateMessageVO> sendMessage(@Valid @RequestBody PrivateMessageDTO dto) {
+        // 从SessionContext中获取当前用户会话
+        UserSession session = SessionContext.getSession();
+        if (session == null) {
+           // return ResultUtils.error();
+        }
+
+        // 获取当前用户的userId和terminal
+        Long userId = session.getUserId();
+        Integer terminal = session.getTerminal();
+
+        // 调用服务层的sendMessage方法，并传递userId和terminal
+        PrivateMessageVO messageVO = privateMessageService.sendMessage(dto, userId, terminal);
+        return ResultUtils.success(messageVO);
     }
 
     @DeleteMapping("/recall/{id}")

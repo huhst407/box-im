@@ -29,6 +29,7 @@ import com.bx.implatform.vo.OnlineTerminalVO;
 import com.bx.implatform.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,6 +47,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private final FriendService friendService;
     private final JwtProperties jwtProperties;
     private final IMClient imClient;
+    private final PrivateMessageServiceImpl privateMessageServiceImpl;
 
     @Override
     public LoginVO login(LoginDTO dto) {
@@ -74,6 +76,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         vo.setAccessTokenExpiresIn(jwtProperties.getAccessTokenExpireIn());
         vo.setRefreshToken(refreshToken);
         vo.setRefreshTokenExpiresIn(jwtProperties.getRefreshTokenExpireIn());
+
+
+
         return vo;
     }
 
@@ -114,6 +119,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user = BeanUtils.copyProperties(dto, User.class);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         this.save(user);
+
+
+
         log.info("注册用户，用户id:{},用户名:{},昵称:{}", user.getId(), dto.getUserName(), dto.getNickName());
     }
 

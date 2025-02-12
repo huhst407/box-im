@@ -16,7 +16,7 @@ import lombok.AllArgsConstructor;
  */
 @AllArgsConstructor
 public enum MessageType {
-
+    UNREAD(-1, "未读"),
     TEXT(0, "文字消息"),
     IMAGE(1, "图片消息"),
     FILE(2, "文件消息"),

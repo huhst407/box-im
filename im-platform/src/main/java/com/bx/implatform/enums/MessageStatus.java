@@ -20,7 +20,12 @@ public enum MessageStatus {
     /**
      * 已读
      */
-    READED(3, "已读");
+    READED(3, "已读"),
+
+    /**
+     * 未读
+     */
+    UNREAD(-1, "未读");
 
     private final Integer code;
 

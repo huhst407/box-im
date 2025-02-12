@@ -11,11 +11,27 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  */
 public class SessionContext {
 
+    // 使用ThreadLocal来存储UserSession
+    private static final ThreadLocal<UserSession> sessionThreadLocal = new ThreadLocal<>();
+
     public static UserSession getSession() {
-        // 从请求上下文里获取Request对象
-        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = requestAttributes.getRequest();
-        return (UserSession) request.getAttribute("session");
+        // 首先尝试从ThreadLocal中获取
+        UserSession session = sessionThreadLocal.get();
+        if (session == null) {
+            // 如果ThreadLocal中没有，再尝试从请求上下文中获取
+            ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+            if (requestAttributes != null) {
+                session = (UserSession) requestAttributes.getRequest().getAttribute("session");
+            }
+        }
+        return session;
     }
 
+    public static void setSession(UserSession session) {
+        sessionThreadLocal.set(session); // 将UserSession存储到ThreadLocal中
+    }
+
+    public static void removeSession() {
+        sessionThreadLocal.remove(); // 从ThreadLocal中移除UserSession
+    }
 }
