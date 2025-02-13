@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper, PrivateMessage>
-    implements PrivateMessageService {
+        implements PrivateMessageService {
 
     private final FriendService friendService;
     private final IMClient imClient;
@@ -134,15 +134,15 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         long stIdx = (page - 1) * size;
         QueryWrapper<PrivateMessage> wrapper = new QueryWrapper<>();
         wrapper.lambda().and(
-                wrap -> wrap.and(wp -> wp.eq(PrivateMessage::getSendId, userId).eq(PrivateMessage::getRecvId, friendId))
-                    .or(wp -> wp.eq(PrivateMessage::getRecvId, userId).eq(PrivateMessage::getSendId, friendId)))
-            .ne(PrivateMessage::getStatus, MessageStatus.RECALL.code()).orderByDesc(PrivateMessage::getId)
-            .last("limit " + stIdx + "," + size);
+                        wrap -> wrap.and(wp -> wp.eq(PrivateMessage::getSendId, userId).eq(PrivateMessage::getRecvId, friendId))
+                                .or(wp -> wp.eq(PrivateMessage::getRecvId, userId).eq(PrivateMessage::getSendId, friendId)))
+                .ne(PrivateMessage::getStatus, MessageStatus.RECALL.code()).orderByDesc(PrivateMessage::getId)
+                .last("limit " + stIdx + "," + size);
 
         List<PrivateMessage> messages = this.list(wrapper);
         List<PrivateMessageVO> messageInfos =
-            messages.stream().map(m -> BeanUtils.copyProperties(m, PrivateMessageVO.class))
-                .collect(Collectors.toList());
+                messages.stream().map(m -> BeanUtils.copyProperties(m, PrivateMessageVO.class))
+                        .collect(Collectors.toList());
         log.info("拉取聊天记录，用户id:{},好友id:{}，数量:{}", userId, friendId, messageInfos.size());
         return messageInfos;
     }
@@ -169,10 +169,10 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         int months = session.getTerminal().equals(IMTerminalType.APP.code()) ? 1 : 3;
         Date minDate = DateUtils.addMonths(new Date(), -months);
         queryWrapper.gt(PrivateMessage::getId, minId).ge(PrivateMessage::getSendTime, minDate)
-            .ne(PrivateMessage::getStatus, MessageStatus.RECALL.code()).and(wrap -> wrap.and(
-                    wp -> wp.eq(PrivateMessage::getSendId, session.getUserId()).in(PrivateMessage::getRecvId, friendIds))
-                .or(wp -> wp.eq(PrivateMessage::getRecvId, session.getUserId()).in(PrivateMessage::getSendId, friendIds)))
-            .orderByAsc(PrivateMessage::getId);
+                .ne(PrivateMessage::getStatus, MessageStatus.RECALL.code()).and(wrap -> wrap.and(
+                                wp -> wp.eq(PrivateMessage::getSendId, session.getUserId()).in(PrivateMessage::getRecvId, friendIds))
+                        .or(wp -> wp.eq(PrivateMessage::getRecvId, session.getUserId()).in(PrivateMessage::getSendId, friendIds)))
+                .orderByAsc(PrivateMessage::getId);
         List<PrivateMessage> messages = this.list(queryWrapper);
         // 推送消息
         for (PrivateMessage m : messages) {
@@ -221,8 +221,8 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         // 修改消息状态为已读
         LambdaUpdateWrapper<PrivateMessage> updateWrapper = Wrappers.lambdaUpdate();
         updateWrapper.eq(PrivateMessage::getSendId, friendId).eq(PrivateMessage::getRecvId, session.getUserId())
-            .eq(PrivateMessage::getStatus, MessageStatus.SENDED.code())
-            .set(PrivateMessage::getStatus, MessageStatus.READED.code());
+                .eq(PrivateMessage::getStatus, MessageStatus.SENDED.code())
+                .set(PrivateMessage::getStatus, MessageStatus.READED.code());
         this.update(updateWrapper);
         log.info("消息已读，接收方id:{},发送方id:{}", session.getUserId(), friendId);
     }
@@ -232,8 +232,8 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         UserSession session = SessionContext.getSession();
         LambdaQueryWrapper<PrivateMessage> wrapper = Wrappers.lambdaQuery();
         wrapper.eq(PrivateMessage::getSendId, session.getUserId()).eq(PrivateMessage::getRecvId, friendId)
-            .eq(PrivateMessage::getStatus, MessageStatus.READED.code()).orderByDesc(PrivateMessage::getId)
-            .select(PrivateMessage::getId).last("limit 1");
+                .eq(PrivateMessage::getStatus, MessageStatus.READED.code()).orderByDesc(PrivateMessage::getId)
+                .select(PrivateMessage::getId).last("limit 1");
         PrivateMessage message = this.getOne(wrapper);
         if (Objects.isNull(message)) {
             return -1L;
@@ -301,11 +301,6 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
         sendMessage.setSendResult(false);
         imClient.sendPrivateMessage(sendMessage);
     }
-
-
-
-
-
     private List<PrivateMessage> findUnreadMessages(Long userId) {
         // 查询未读消息
         QueryWrapper<PrivateMessage> queryWrapper = new QueryWrapper<>();
@@ -318,12 +313,12 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
     private String getResponseFromQingyunke(String userMessage) {
         try {
             String encodedMessage = URLEncoder.encode(userMessage, "UTF-8");
-            String urlString = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=" + encodedMessage;
+            String urlString = "http://localhost:8084/vanna-api/v0/generate_sql?question=" + encodedMessage;
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            connection.setReadTimeout(50000);
 
             int responseCode = connection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
@@ -335,14 +330,9 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
                 }
                 in.close();
                 // 解析 JSON 响应
-                String jsonResponse = response.toString();
-                int startIndex = jsonResponse.indexOf("\"content\":\"") + 11;
-                int endIndex = jsonResponse.indexOf("\"}", startIndex);
-                if (startIndex != -1 && endIndex != -1) {
-                    return jsonResponse.substring(startIndex, endIndex);
-                } else {
-                    return "无法解析响应内容";
-                }
+                // 使用 org.json 库解析 JSON 响应并提取 text 字段
+                org.json.JSONObject jsonResponse = new org.json.JSONObject(response.toString());
+                return jsonResponse.getString("text");
             } else {
                 return "请求失败，响应码：" + responseCode;
             }
@@ -351,7 +341,4 @@ public class PrivateMessageServiceImpl extends ServiceImpl<PrivateMessageMapper,
             return "请求异常：" + e.getMessage();
         }
     }
-
-
-
 }

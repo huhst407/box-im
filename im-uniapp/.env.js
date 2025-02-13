@@ -1,9 +1,9 @@
 //设置环境(打包前修改此变量)
-const ENV = "PROD";
+const ENV = "DEV";
 const UNI_APP = {}
 if(ENV=="DEV"){
-	UNI_APP.BASE_URL = "http://192.168.2.247:8888";
-	UNI_APP.WS_URL = "ws://192.168.2.247:8878/im";
+	UNI_APP.BASE_URL = "http://192.168.0.104:8888";
+	UNI_APP.WS_URL = "ws://192.168.0.104:8878/im";
 	// H5 走本地代理解决跨域问题
 	// #ifdef H5
 		UNI_APP.BASE_URL = "/api";

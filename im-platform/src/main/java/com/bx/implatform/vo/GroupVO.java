@@ -50,11 +50,5 @@ public class GroupVO {
     @Schema(description = "是否已退出")
     private Boolean quit;
 
-    @Schema(description = "账号是否被封禁")
-    private Boolean isBanned;
-
-    @Schema(description = "被封禁原因")
-    private String reason;
-
 
 }

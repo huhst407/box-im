@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/im_platform?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/box-im?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true
     username: root
-    password: 1234
+    password: 123456
   data:
     redis:
       host: localhost
@@ -11,10 +11,10 @@ spring:
       password: PmEpfRjpBnTN6CgW
 
 minio:
-  endpoint: http://127.0.0.1:9000 #内网地址
-  domain: http://127.0.0.1:9000  #外网访问地址
-  accessKey: obQ7xZEqTl8rFIDwV4FM
-  secretKey: PZQrRUKapopFoFn7TRCrtGEBhWhvKU0gbum5Ai2e
+  endpoint: http://127.0.0.1:9001 #内网地址
+  domain: https://www.boxim.online/file  #外网访问地址
+  accessKey: UL90lBSdwx7SI57MAYuV
+  secretKey: F0pA7f6wMwkU8h5N8cxJYNUrUgUlY1a4M4FC9BTF
   bucketName: box-im
   imagePath: image
   filePath: file

@@ -60,7 +60,7 @@ const request = (options) => {
 			},
 			fail(error) {
 				uni.showToast({
-					title: "网络似乎有点不给力哟",
+					title: error.errMsg || "网络似乎有点不给力哟",
 					icon: "none",
 					duration: 1500
 				})

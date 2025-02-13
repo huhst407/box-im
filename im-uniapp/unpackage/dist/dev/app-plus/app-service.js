@@ -1270,7 +1270,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$S], ["__scopeId", "data-v-d31e1c47"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$S], ["__scopeId", "data-v-d31e1c47"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -1371,7 +1371,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$R], ["__scopeId", "data-v-e9345f2e"], ["__file", "C:/Java/box-im/im-uniapp/components/nav-bar/nav-bar.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$R], ["__scopeId", "data-v-e9345f2e"], ["__file", "D:/Temp_can_delete/box-im-master/components/nav-bar/nav-bar.vue"]]);
   const _sfc_main$R = {
     data() {
       return {};
@@ -1419,7 +1419,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_2$6 = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$Q], ["__scopeId", "data-v-d980cb9a"], ["__file", "C:/Java/box-im/im-uniapp/components/loading/loading.vue"]]);
+  const __easycom_2$6 = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$Q], ["__scopeId", "data-v-d980cb9a"], ["__file", "D:/Temp_can_delete/box-im-master/components/loading/loading.vue"]]);
   const isObject$1 = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -1939,7 +1939,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$5 = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$P], ["__scopeId", "data-v-f07ef577"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
+  const __easycom_1$5 = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$P], ["__scopeId", "data-v-f07ef577"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
   const _sfc_main$P = {
     name: "head-image",
     data() {
@@ -2052,7 +2052,7 @@ if (uni.restoreGlobal) {
       })) : vue.createCommentVNode("v-if", true)
     ], 8, ["title"]);
   }
-  const __easycom_2$5 = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$O], ["__scopeId", "data-v-aff6adc6"], ["__file", "C:/Java/box-im/im-uniapp/components/head-image/head-image.vue"]]);
+  const __easycom_2$5 = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$O], ["__scopeId", "data-v-aff6adc6"], ["__file", "D:/Temp_can_delete/box-im-master/components/head-image/head-image.vue"]]);
   const _sfc_main$O = {
     name: "UniTag",
     emits: ["click"],
@@ -2147,7 +2147,7 @@ if (uni.restoreGlobal) {
       /* TEXT, CLASS, STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_3$6 = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$N], ["__scopeId", "data-v-1f94d070"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-tag/components/uni-tag/uni-tag.vue"]]);
+  const __easycom_3$6 = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$N], ["__scopeId", "data-v-1f94d070"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-tag/components/uni-tag/uni-tag.vue"]]);
   const _sfc_main$N = {
     name: "UniBadge",
     emits: ["click"],
@@ -2288,7 +2288,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_2$4 = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$M], ["__scopeId", "data-v-c97cb896"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
+  const __easycom_2$4 = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$M], ["__scopeId", "data-v-c97cb896"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
   const _sfc_main$M = {
     name: "chatItem",
     data() {
@@ -2423,7 +2423,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_3$5 = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$L], ["__scopeId", "data-v-4025332e"], ["__file", "C:/Java/box-im/im-uniapp/components/chat-item/chat-item.vue"]]);
+  const __easycom_3$5 = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$L], ["__scopeId", "data-v-4025332e"], ["__file", "D:/Temp_can_delete/box-im-master/components/chat-item/chat-item.vue"]]);
   const _sfc_main$L = {
     name: "long-press-menu",
     data() {
@@ -2551,7 +2551,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$4 = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$K], ["__scopeId", "data-v-f8cd5c6f"], ["__file", "C:/Java/box-im/im-uniapp/components/long-press-menu/long-press-menu.vue"]]);
+  const __easycom_1$4 = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$K], ["__scopeId", "data-v-f8cd5c6f"], ["__file", "D:/Temp_can_delete/box-im-master/components/long-press-menu/long-press-menu.vue"]]);
   const _sfc_main$K = {
     data() {
       return {
@@ -2746,7 +2746,7 @@ if (uni.restoreGlobal) {
       ]))
     ]);
   }
-  const PagesChatChat = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$J], ["__file", "C:/Java/box-im/im-uniapp/pages/chat/chat.vue"]]);
+  const PagesChatChat = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$J], ["__file", "D:/Temp_can_delete/box-im-master/pages/chat/chat.vue"]]);
   function obj2strClass(obj) {
     let classess = "";
     for (let key in obj) {
@@ -3219,7 +3219,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$I], ["__scopeId", "data-v-09fd5285"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$I], ["__scopeId", "data-v-09fd5285"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
   const _sfc_main$I = {
     name: "uniFormsItem",
     options: {
@@ -3608,7 +3608,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_2$3 = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$H], ["__scopeId", "data-v-462874dd"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue"]]);
+  const __easycom_2$3 = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$H], ["__scopeId", "data-v-462874dd"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue"]]);
   var pattern = {
     email: /^\S+?@\S+?\.\S+?$/,
     idcard: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/,
@@ -4476,7 +4476,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_3$4 = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$G], ["__scopeId", "data-v-9a1e3c32"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-forms/components/uni-forms/uni-forms.vue"]]);
+  const __easycom_3$4 = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$G], ["__scopeId", "data-v-9a1e3c32"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-forms/components/uni-forms/uni-forms.vue"]]);
   const _sfc_main$G = {
     data() {
       return {
@@ -4578,7 +4578,7 @@ if (uni.restoreGlobal) {
       }, " 没有账号,前往注册 ")
     ]);
   }
-  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$F], ["__file", "C:/Java/box-im/im-uniapp/pages/login/login.vue"]]);
+  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$F], ["__file", "D:/Temp_can_delete/box-im-master/pages/login/login.vue"]]);
   const _sfc_main$F = {
     data() {
       return {
@@ -4752,7 +4752,7 @@ if (uni.restoreGlobal) {
       }, " 返回登录页面 ")
     ]);
   }
-  const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$E], ["__file", "C:/Java/box-im/im-uniapp/pages/register/register.vue"]]);
+  const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$E], ["__file", "D:/Temp_can_delete/box-im-master/pages/register/register.vue"]]);
   const defineMixin = (options) => {
     return options;
   };
@@ -7331,7 +7331,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$D], ["__scopeId", "data-v-20d39374"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uview-plus/components/u-index-anchor/u-index-anchor.vue"]]);
+  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$D], ["__scopeId", "data-v-20d39374"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uview-plus/components/u-index-anchor/u-index-anchor.vue"]]);
   const _imports_0 = "/static/image/online_web.png";
   const _imports_1 = "/static/image/online_app.png";
   const _sfc_main$D = {
@@ -7403,7 +7403,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$C], ["__scopeId", "data-v-85c739ab"], ["__file", "C:/Java/box-im/im-uniapp/components/friend-item/friend-item.vue"]]);
+  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$C], ["__scopeId", "data-v-85c739ab"], ["__file", "D:/Temp_can_delete/box-im-master/components/friend-item/friend-item.vue"]]);
   const props$2 = defineMixin({
     props: {}
   });
@@ -7454,7 +7454,7 @@ if (uni.restoreGlobal) {
       vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
     ], 10, ["id"]);
   }
-  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$B], ["__scopeId", "data-v-83b92c70"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uview-plus/components/u-index-item/u-index-item.vue"]]);
+  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$B], ["__scopeId", "data-v-83b92c70"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uview-plus/components/u-index-item/u-index-item.vue"]]);
   const props$1 = defineMixin({
     props: {
       // 是否展示组件
@@ -7599,7 +7599,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE, NEED_HYDRATION */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$A], ["__scopeId", "data-v-5cec8177"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uview-plus/components/u-transition/u-transition.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$A], ["__scopeId", "data-v-5cec8177"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uview-plus/components/u-transition/u-transition.vue"]]);
   const props = defineMixin({
     props: {
       // 右边锚点非激活的颜色
@@ -7935,7 +7935,7 @@ if (uni.restoreGlobal) {
       }, 8, ["show", "customStyle"])
     ]);
   }
-  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$z], ["__scopeId", "data-v-dfefaad1"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uview-plus/components/u-index-list/u-index-list.vue"]]);
+  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$z], ["__scopeId", "data-v-dfefaad1"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uview-plus/components/u-index-list/u-index-list.vue"]]);
   const DoubleUnicodePrefixReg = /^[\uD800-\uDBFF]$/;
   const DoubleUnicodeSuffixReg = /^[\uDC00-\uDFFF]$/;
   const DoubleUnicodeReg = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
@@ -32365,7 +32365,7 @@ if (uni.restoreGlobal) {
       ]))
     ]);
   }
-  const PagesFriendFriend = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$y], ["__scopeId", "data-v-b7e6a9a8"], ["__file", "C:/Java/box-im/im-uniapp/pages/friend/friend.vue"]]);
+  const PagesFriendFriend = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$y], ["__scopeId", "data-v-b7e6a9a8"], ["__file", "D:/Temp_can_delete/box-im-master/pages/friend/friend.vue"]]);
   const _sfc_main$y = {
     name: "group-item",
     data() {
@@ -32406,7 +32406,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$x], ["__scopeId", "data-v-1f417333"], ["__file", "C:/Java/box-im/im-uniapp/components/group-item/group-item.vue"]]);
+  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$x], ["__scopeId", "data-v-1f417333"], ["__file", "D:/Temp_can_delete/box-im-master/components/group-item/group-item.vue"]]);
   const _sfc_main$x = {
     data() {
       return {
@@ -32487,7 +32487,7 @@ if (uni.restoreGlobal) {
       ]))
     ]);
   }
-  const PagesGroupGroup = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$w], ["__scopeId", "data-v-3945b5f1"], ["__file", "C:/Java/box-im/im-uniapp/pages/group/group.vue"]]);
+  const PagesGroupGroup = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$w], ["__scopeId", "data-v-3945b5f1"], ["__file", "D:/Temp_can_delete/box-im-master/pages/group/group.vue"]]);
   const _sfc_main$w = {
     name: "UniCard",
     emits: ["click"],
@@ -32650,7 +32650,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$v], ["__scopeId", "data-v-ae4bee67"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
+  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$v], ["__scopeId", "data-v-ae4bee67"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
   const _sfc_main$v = {
     data() {
       return {};
@@ -32799,7 +32799,7 @@ if (uni.restoreGlobal) {
       })
     ]);
   }
-  const PagesMineMine = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$u], ["__scopeId", "data-v-7c2ebfa5"], ["__file", "C:/Java/box-im/im-uniapp/pages/mine/mine.vue"]]);
+  const PagesMineMine = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$u], ["__scopeId", "data-v-7c2ebfa5"], ["__file", "D:/Temp_can_delete/box-im-master/pages/mine/mine.vue"]]);
   const _sfc_main$u = {
     data() {
       return {
@@ -33042,7 +33042,7 @@ if (uni.restoreGlobal) {
       })
     ]);
   }
-  const PagesCommonUserInfo = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$t], ["__scopeId", "data-v-b2c82734"], ["__file", "C:/Java/box-im/im-uniapp/pages/common/user-info.vue"]]);
+  const PagesCommonUserInfo = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$t], ["__scopeId", "data-v-b2c82734"], ["__file", "D:/Temp_can_delete/box-im-master/pages/common/user-info.vue"]]);
   const _sfc_main$t = {
     name: "uniLink",
     props: {
@@ -33143,7 +33143,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     ));
   }
-  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$s], ["__scopeId", "data-v-5db80ddb"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-link/components/uni-link/uni-link.vue"]]);
+  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$s], ["__scopeId", "data-v-5db80ddb"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-link/components/uni-link/uni-link.vue"]]);
   const _sfc_main$s = {
     name: "UniSegmentedControl",
     emits: ["clickItem"],
@@ -33238,7 +33238,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-86aa1171"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-86aa1171"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue"]]);
   class MPAnimation {
     constructor(options, _this) {
       this.options = options;
@@ -33615,7 +33615,7 @@ if (uni.restoreGlobal) {
       [vue.vShow, $data.isShow]
     ]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-transition/components/uni-transition/uni-transition.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-transition/components/uni-transition/uni-transition.vue"]]);
   const _sfc_main$q = {
     name: "uniPopup",
     components: {},
@@ -34003,7 +34003,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__scopeId", "data-v-4dd3c44b"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-popup/components/uni-popup/uni-popup.vue"]]);
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__scopeId", "data-v-4dd3c44b"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-popup/components/uni-popup/uni-popup.vue"]]);
   const _sfc_main$p = {
     name: "chat-group-readed",
     data() {
@@ -34166,7 +34166,7 @@ if (uni.restoreGlobal) {
       /* NEED_PATCH */
     );
   }
-  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-9a80f5fc"], ["__file", "C:/Java/box-im/im-uniapp/components/chat-group-readed/chat-group-readed.vue"]]);
+  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-9a80f5fc"], ["__file", "D:/Temp_can_delete/box-im-master/components/chat-group-readed/chat-group-readed.vue"]]);
   const _sfc_main$o = {
     name: "chat-message-item",
     props: {
@@ -34560,7 +34560,7 @@ if (uni.restoreGlobal) {
       }, null, 8, ["groupMembers", "msgInfo"])
     ]);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__scopeId", "data-v-4543ac39"], ["__file", "C:/Java/box-im/im-uniapp/components/chat-message-item/chat-message-item.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__scopeId", "data-v-4543ac39"], ["__file", "D:/Temp_can_delete/box-im-master/components/chat-message-item/chat-message-item.vue"]]);
   const _sfc_main$n = {
     name: "chat-record",
     data() {
@@ -34759,7 +34759,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-f6051c28"], ["__file", "C:/Java/box-im/im-uniapp/components/chat-record/chat-record.vue"]]);
+  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-f6051c28"], ["__file", "D:/Temp_can_delete/box-im-master/components/chat-record/chat-record.vue"]]);
   class LsjFile {
     constructor(data) {
       this.dom = null;
@@ -35349,11 +35349,11 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-27a611eb"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/lsj-upload/components/lsj-upload/lsj-upload.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-27a611eb"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/lsj-upload/components/lsj-upload/lsj-upload.vue"]]);
   const UNI_APP = {};
   {
-    UNI_APP.BASE_URL = "https://www.boxim.online/api";
-    UNI_APP.WS_URL = "wss://www.boxim.online/im";
+    UNI_APP.BASE_URL = "http://192.168.0.104:8888";
+    UNI_APP.WS_URL = "ws://192.168.0.104:8878/im";
   }
   const _sfc_main$l = {
     name: "file-upload",
@@ -35477,7 +35477,7 @@ if (uni.restoreGlobal) {
       }, 8, ["option", "onUploadEnd", "onChange", "size"])
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__file", "C:/Java/box-im/im-uniapp/components/file-upload/file-upload.vue"]]);
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__file", "D:/Temp_can_delete/box-im-master/components/file-upload/file-upload.vue"]]);
   const _sfc_main$k = {
     name: "image-upload",
     data() {
@@ -35568,7 +35568,7 @@ if (uni.restoreGlobal) {
       vue.renderSlot(_ctx.$slots, "default")
     ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__file", "C:/Java/box-im/im-uniapp/components/image-upload/image-upload.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__file", "D:/Temp_can_delete/box-im-master/components/image-upload/image-upload.vue"]]);
   const _sfc_main$j = {
     name: "chat-at-box",
     props: {
@@ -35759,7 +35759,7 @@ if (uni.restoreGlobal) {
       /* STABLE */
     }, 8, ["onChange"]);
   }
-  const __easycom_6 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-4a0f0007"], ["__file", "C:/Java/box-im/im-uniapp/components/chat-at-box/chat-at-box.vue"]]);
+  const __easycom_6 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-4a0f0007"], ["__file", "D:/Temp_can_delete/box-im-master/components/chat-at-box/chat-at-box.vue"]]);
   const _sfc_main$i = {
     name: "chat-group-member-choose",
     props: {
@@ -35958,7 +35958,7 @@ if (uni.restoreGlobal) {
       /* NEED_PATCH */
     );
   }
-  const __easycom_7 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-f693a839"], ["__file", "C:/Java/box-im/im-uniapp/components/group-member-selector/group-member-selector.vue"]]);
+  const __easycom_7 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-f693a839"], ["__file", "D:/Temp_can_delete/box-im-master/components/group-member-selector/group-member-selector.vue"]]);
   const popup = {
     data() {
       return {};
@@ -36200,7 +36200,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-d78c88b7"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-popup/components/uni-popup-dialog/uni-popup-dialog.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-d78c88b7"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-popup/components/uni-popup-dialog/uni-popup-dialog.vue"]]);
   const _sfc_main$g = {
     data() {
       return {
@@ -36313,7 +36313,7 @@ if (uni.restoreGlobal) {
       /* NEED_PATCH */
     );
   }
-  const __easycom_8 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-1a6a4ff4"], ["__file", "C:/Java/box-im/im-uniapp/components/group-rtc-join/group-rtc-join.vue"]]);
+  const __easycom_8 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-1a6a4ff4"], ["__file", "D:/Temp_can_delete/box-im-master/components/group-rtc-join/group-rtc-join.vue"]]);
   const _sfc_main$f = {
     data() {
       return {
@@ -37369,7 +37369,7 @@ if (uni.restoreGlobal) {
       }, null, 8, ["groupId"])
     ]);
   }
-  const PagesChatChatBox = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__file", "C:/Java/box-im/im-uniapp/pages/chat/chat-box.vue"]]);
+  const PagesChatChatBox = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__file", "D:/Temp_can_delete/box-im-master/pages/chat/chat-box.vue"]]);
   const _sfc_main$e = {
     data() {
       return {
@@ -37444,7 +37444,7 @@ if (uni.restoreGlobal) {
       src: $data.url
     }, null, 40, ["src"]);
   }
-  const PagesChatChatPrivateVideo = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-fa1dc093"], ["__file", "C:/Java/box-im/im-uniapp/pages/chat/chat-private-video.vue"]]);
+  const PagesChatChatPrivateVideo = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-fa1dc093"], ["__file", "D:/Temp_can_delete/box-im-master/pages/chat/chat-private-video.vue"]]);
   const _sfc_main$d = {
     data() {
       return {
@@ -37528,7 +37528,7 @@ if (uni.restoreGlobal) {
       src: $data.url
     }, null, 40, ["src"]);
   }
-  const PagesChatChatGroupVideo = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d085553c"], ["__file", "C:/Java/box-im/im-uniapp/pages/chat/chat-group-video.vue"]]);
+  const PagesChatChatGroupVideo = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d085553c"], ["__file", "D:/Temp_can_delete/box-im-master/pages/chat/chat-group-video.vue"]]);
   const _sfc_main$c = {
     data() {
       return {
@@ -37683,7 +37683,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesFriendFriendAdd = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-1b1267ec"], ["__file", "C:/Java/box-im/im-uniapp/pages/friend/friend-add.vue"]]);
+  const PagesFriendFriendAdd = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-1b1267ec"], ["__file", "D:/Temp_can_delete/box-im-master/pages/friend/friend-add.vue"]]);
   const _sfc_main$b = {
     name: "UniNoticeBar",
     emits: ["click", "getmore", "close"],
@@ -37920,7 +37920,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-c3453ea3"], ["__file", "C:/Java/box-im/im-uniapp/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-c3453ea3"], ["__file", "D:/Temp_can_delete/box-im-master/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
   const _sfc_main$a = {
     data() {
       return {
@@ -38212,7 +38212,7 @@ if (uni.restoreGlobal) {
       })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const PagesGroupGroupInfo = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__file", "C:/Java/box-im/im-uniapp/pages/group/group-info.vue"]]);
+  const PagesGroupGroupInfo = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__file", "D:/Temp_can_delete/box-im-master/pages/group/group-info.vue"]]);
   const _sfc_main$9 = {
     data() {
       return {
@@ -38400,7 +38400,7 @@ if (uni.restoreGlobal) {
       }, "提交")
     ]);
   }
-  const PagesGroupGroupEdit = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-2de297f5"], ["__file", "C:/Java/box-im/im-uniapp/pages/group/group-edit.vue"]]);
+  const PagesGroupGroupEdit = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-2de297f5"], ["__file", "D:/Temp_can_delete/box-im-master/pages/group/group-edit.vue"]]);
   const _sfc_main$8 = {
     data() {
       return {
@@ -38550,7 +38550,7 @@ if (uni.restoreGlobal) {
       }, "邀请(" + vue.toDisplayString($options.inviteSize) + ") ", 9, ["disabled"])
     ]);
   }
-  const PagesGroupGroupInvite = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-fd91ec59"], ["__file", "C:/Java/box-im/im-uniapp/pages/group/group-invite.vue"]]);
+  const PagesGroupGroupInvite = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-fd91ec59"], ["__file", "D:/Temp_can_delete/box-im-master/pages/group/group-invite.vue"]]);
   const _sfc_main$7 = {
     data() {
       return {
@@ -38710,7 +38710,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesGroupGroupMember = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-8f3f7636"], ["__file", "C:/Java/box-im/im-uniapp/pages/group/group-member.vue"]]);
+  const PagesGroupGroupMember = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-8f3f7636"], ["__file", "D:/Temp_can_delete/box-im-master/pages/group/group-member.vue"]]);
   const _sfc_main$6 = {
     data() {
       return {
@@ -38855,7 +38855,7 @@ if (uni.restoreGlobal) {
       }, "提交")
     ]);
   }
-  const PagesMineMineEdit = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-27f2e930"], ["__file", "C:/Java/box-im/im-uniapp/pages/mine/mine-edit.vue"]]);
+  const PagesMineMineEdit = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-27f2e930"], ["__file", "D:/Temp_can_delete/box-im-master/pages/mine/mine-edit.vue"]]);
   const _sfc_main$5 = {
     data() {
       return {
@@ -39012,7 +39012,7 @@ if (uni.restoreGlobal) {
       }, "提交")
     ]);
   }
-  const PagesMineMinePassword = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "C:/Java/box-im/im-uniapp/pages/mine/mine-password.vue"]]);
+  const PagesMineMinePassword = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "D:/Temp_can_delete/box-im-master/pages/mine/mine-password.vue"]]);
   __definePage("pages/chat/chat", PagesChatChat);
   __definePage("pages/login/login", PagesLoginLogin);
   __definePage("pages/register/register", PagesRegisterRegister);
@@ -39083,7 +39083,7 @@ if (uni.restoreGlobal) {
         },
         fail(error2) {
           uni.showToast({
-            title: "网络似乎有点不给力哟",
+            title: error2.errMsg || "网络似乎有点不给力哟",
             icon: "none",
             duration: 1500
           });
@@ -39672,7 +39672,7 @@ if (uni.restoreGlobal) {
       });
     }
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "C:/Java/box-im/im-uniapp/App.vue"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "D:/Temp_can_delete/box-im-master/App.vue"]]);
   const emoTextList = [
     "憨笑",
     "媚眼",
@@ -42783,7 +42783,7 @@ This will fail in production if not fixed.`);
       vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
     ]);
   }
-  const barGroup = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__scopeId", "data-v-60976667"], ["__file", "C:/Java/box-im/im-uniapp/components/bar/bar-group.vue"]]);
+  const barGroup = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__scopeId", "data-v-60976667"], ["__file", "D:/Temp_can_delete/box-im-master/components/bar/bar-group.vue"]]);
   const _sfc_main$2 = {
     name: "arrow-bar",
     props: {
@@ -42810,7 +42810,7 @@ This will fail in production if not fixed.`);
       })
     ]);
   }
-  const arrowBar = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__scopeId", "data-v-b22ddecd"], ["__file", "C:/Java/box-im/im-uniapp/components/bar/arrow-bar.vue"]]);
+  const arrowBar = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__scopeId", "data-v-b22ddecd"], ["__file", "D:/Temp_can_delete/box-im-master/components/bar/arrow-bar.vue"]]);
   const _sfc_main$1 = {
     name: "btn-bar",
     props: {
@@ -42876,7 +42876,7 @@ This will fail in production if not fixed.`);
       /* STYLE */
     );
   }
-  const btnBar = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-ff28c47e"], ["__file", "C:/Java/box-im/im-uniapp/components/bar/btn-bar.vue"]]);
+  const btnBar = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-ff28c47e"], ["__file", "D:/Temp_can_delete/box-im-master/components/bar/btn-bar.vue"]]);
   const _sfc_main = {
     name: "switch-bar",
     props: {
@@ -42921,7 +42921,7 @@ This will fail in production if not fixed.`);
       }, null, 40, ["checked"])
     ]);
   }
-  const switchBar = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-6d6dc2d1"], ["__file", "C:/Java/box-im/im-uniapp/components/bar/switch-bar.vue"]]);
+  const switchBar = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-6d6dc2d1"], ["__file", "D:/Temp_can_delete/box-im-master/components/bar/switch-bar.vue"]]);
   const rc = uni.getRecorderManager();
   let startTime = null;
   let checkIsEnable = () => {

@@ -30,7 +30,7 @@ public class PrivateMessageController {
         // 从SessionContext中获取当前用户会话
         UserSession session = SessionContext.getSession();
         if (session == null) {
-           // return ResultUtils.error();
+            // return ResultUtils.error();
         }
 
         // 获取当前用户的userId和terminal
@@ -72,9 +72,9 @@ public class PrivateMessageController {
     @GetMapping("/history")
     @Operation(summary = "查询聊天记录", description = "查询聊天记录")
     public Result<List<PrivateMessageVO>> recallMessage(
-        @NotNull(message = "好友id不能为空") @RequestParam Long friendId,
-        @NotNull(message = "页码不能为空") @RequestParam Long page,
-        @NotNull(message = "size不能为空") @RequestParam Long size) {
+            @NotNull(message = "好友id不能为空") @RequestParam Long friendId,
+            @NotNull(message = "页码不能为空") @RequestParam Long page,
+            @NotNull(message = "size不能为空") @RequestParam Long size) {
         return ResultUtils.success(privateMessageService.findHistoryMessage(friendId, page, size));
     }
 

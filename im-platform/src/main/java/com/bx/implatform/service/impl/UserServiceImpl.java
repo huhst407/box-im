@@ -68,9 +68,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         session.setTerminal(dto.getTerminal());
         String strJson = JSON.toJSONString(session);
         String accessToken = JwtUtil.sign(user.getId(), strJson, jwtProperties.getAccessTokenExpireIn(),
-            jwtProperties.getAccessTokenSecret());
+                jwtProperties.getAccessTokenSecret());
         String refreshToken = JwtUtil.sign(user.getId(), strJson, jwtProperties.getRefreshTokenExpireIn(),
-            jwtProperties.getRefreshTokenSecret());
+                jwtProperties.getRefreshTokenSecret());
         LoginVO vo = new LoginVO();
         vo.setAccessToken(accessToken);
         vo.setAccessTokenExpiresIn(jwtProperties.getAccessTokenExpireIn());
@@ -99,9 +99,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new GlobalException(tip);
         }
         String accessToken =
-            JwtUtil.sign(userId, strJson, jwtProperties.getAccessTokenExpireIn(), jwtProperties.getAccessTokenSecret());
+                JwtUtil.sign(userId, strJson, jwtProperties.getAccessTokenExpireIn(), jwtProperties.getAccessTokenSecret());
         String newRefreshToken = JwtUtil.sign(userId, strJson, jwtProperties.getRefreshTokenExpireIn(),
-            jwtProperties.getRefreshTokenSecret());
+                jwtProperties.getRefreshTokenSecret());
         LoginVO vo = new LoginVO();
         vo.setAccessToken(accessToken);
         vo.setAccessTokenExpiresIn(jwtProperties.getAccessTokenExpireIn());
